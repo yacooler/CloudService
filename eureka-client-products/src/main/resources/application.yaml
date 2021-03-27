@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: eureka-client-products
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:market;MODE=PostgreSQL
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: false
+server:
+  port: 18001
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_URI:http://localhost:8761/eureka}
+    fetchRegistry: true

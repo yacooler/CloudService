@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="zuul-proxy" />
+        <module name="eureka-feign-client-products" />
+        <module name="front-application" />
+        <module name="product-common" />
+        <module name="eureka-server" />
+        <module name="eureka-client-products" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="product-service" target="14" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="eureka-client-products" options="-parameters" />
+      <module name="eureka-feign-client-products" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="front-application" options="-parameters" />
+      <module name="product-common" options="" />
+      <module name="product-service" options="-parameters" />
+      <module name="zuul-proxy" options="-parameters" />
+    </option>
+  </component>
+</project>
